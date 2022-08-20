@@ -77,7 +77,7 @@ const quiz = [
 // }
 //   }
 function clickButton(i) {
-  const btn = document.querySelectorAll('.js-select-button');
+  const btn = document.querySelectorAll(`.js-select-button${i}`);
   const correct = document.getElementById(`correct${i}`);
   const wrong = document.getElementById(`wrong${i}`);
   const quizAnswer =quiz[i].Answer;
@@ -100,7 +100,7 @@ function clickButton(i) {
     })
   });
 };
-for(let i=0;i=5;i++){
+for(let i=0;i<=5;i++){
 clickButton(i);
 
 };
