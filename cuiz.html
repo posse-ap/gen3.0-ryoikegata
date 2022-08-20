@@ -9,9 +9,10 @@
  <link rel="stylesheet" href="./style.css">
  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
  <link rel="stylesheet" href="./quiz.css">
- <link rel="stylesheet" href="./google">
+ <link rel="stylesheet" href="./quiz-move.css">
 </head>
 <body> 
+
   <header class="header">
     <div class="header-inner">
      <div class="header-img"><img src="./assets-ph1-website/img/logo.svg" alt=""></div>
@@ -31,7 +32,7 @@
       <h1>クイズ</h1>
     </div>
     <div class="quiz_main">
-      <section>
+      <section class="js_quiz">
         <div class="quiz_first">
           <h1>Q1</h1>
           <div class="quiz_text">
@@ -39,21 +40,31 @@
         </div>
           <img src="./assets-ph1-website/img/quiz/img-quiz01.png" alt="">
           <h2>A</h2>
-          <div class="answer_item">
-            <div class="answer_items"><p>約28万人</p></div>
-            <div class="answer_pic"><img src="./Polygon 1.png" alt=""></div>
-            <div class="answer_items"><p>約78万人</p></div>
-            <div class="answer_pic"><img src="./Polygon 1.png" alt=""></div>
-            <div class="answer_items"><p>約183万人</p></div>
-            <div class="answer_pic"><img src="./Polygon 1.png" alt=""></div>
+          <div class="answer_item" >
+              <button class="js-select-button">約28万人</button>
+            <button class="js-select-button">約79万人</button>
+            <button class="js-select-button" >約183万人</button>
           </div>
+          <div class="js-answer-correct" id="correct0">
+            <h3>正解!</h3>
+            <div class="answer-text">
+            <p class="js-answer-a">A</p>
+              <p class="js-correct-answer">約79万人</p></div>
+          </div>
+          <div class="js-answer-wrong" id="wrong0">
+            <h3>不正解...</h3>
+            <div class="answer-text">
+            <p class="js-answer-a">A</p>
+              <p class="js-correct-answer">約79万人</p></div>
+          </div>
+
           <div class="quiz_note">
             <img src="./assets-ph1-website/img/icon/icon-note.svg" alt="">
            <p>経済産業省 2019年3月 - IT人材人材需給に関する調査</p>
           </div>
         </div>
       </section>
-      <section>
+      <section class="js_quiz" quiz-deta="1">
         <div class="quiz_second">
           <h1>Q2</h1>
           <div class="quiz_text">
@@ -62,16 +73,25 @@
           <img src="./assets-ph1-website/img/quiz/img-quiz02.png" alt="">
           <h2>A</h2>
           <div class="answer_item">
-            <div class="answer_items"><p>INTECH</p></div>
-            <div class="answer_pic"><img src="./Polygon 1.png" alt=""></div>
-            <div class="answer_items"><p>BIZZTECH</p></div>
-            <div class="answer_pic"><img src="./Polygon 1.png" alt=""></div>
-            <div class="answer_items"><p>X-TECH</p></div>
-            <div class="answer_pic"><img src="./Polygon 1.png" alt=""></div>
+            <button class="js-select-button">INTECH</button>
+            <button class="js-select-button">BIZZTECH</button>
+            <button class="js-select-button">X-TECH</button>
+          </div>
+          <div class="js-answer-correct" id="correct1">
+            <h3>正解!</h3>
+            <div class="answer-text">
+            <p class="js-answer-a">A</p>
+              <p class="js-correct-answer">X-TECH</p></div>
+          </div>
+          <div class="js-answer-wrong" id="wrong1">
+            <h3>不正解...</h3>
+            <div class="answer-text">
+            <p class="js-answer-a">A</p>
+              <p class="js-correct-answer">X-TECH</p></div>
           </div>
         </div>
       </section>
-      <section>
+      <section class="js_quiz">
         <div class="quiz_third">
           <h1>Q3</h1>
           <div class="quiz_text">
@@ -80,16 +100,25 @@
           <img src="./assets-ph1-website/img/quiz/img-quiz03.png" alt="">
           <h2>A</h2>
           <div class="answer_item">
-            <div class="answer_items"><p>Internet of Things</p></div>
-            <div class="answer_pic"><img src="./Polygon 1.png" alt=""></div>
-            <div class="answer_items"><p>Integrate into Technology</p></div>
-            <div class="answer_pic"><img src="./Polygon 1.png" alt=""></div>
-            <div class="answer_items"><p>Information  on Tool</p></div>
-            <div class="answer_pic"><img src="./Polygon 1.png" alt=""></div>
+            <button class="js-select-button">Internet of Things</button>
+            <button class="js-select-button">Integrate into Technology</button>
+            <button class="js-select-button">Information  on Tool</button>
+          </div>
+          <div class="js-answer-correct" id="correct2">
+            <h3>正解!</h3>
+            <div class="answer-text">
+            <p class="js-answer-a">A</p>
+              <p class="js-correct-answer">Internet of Things</p></div>
+          </div>
+          <div class="js-answer-wrong" id="wrong2">
+            <h3>不正解...</h3>
+            <div class="answer-text">
+            <p class="js-answer-a">A</p>
+              <p class="js-correct-answer">Internet of Things</p></div>
           </div>
         </div>
       </section>
-      <section>
+      <section class="js_quiz" quiz-deta="3">
         <div class="quiz_fourth">
           <h1>Q4</h1>
           <div class="quiz_text">
@@ -98,12 +127,21 @@
           <img src="./assets-ph1-website/img/quiz/img-quiz04.png" alt="">
           <h2>A</h2>
           <div class="answer_item">
-            <div class="answer_items"><p>Society 5.0</p></div>
-            <div class="answer_pic"><img src="./Polygon 1.png" alt=""></div>
-            <div class="answer_items"><p>CyPhy</p></div>
-            <div class="answer_pic"><img src="./Polygon 1.png" alt=""></div>
-            <div class="answer_items"><p>SDGs</p></div>
-            <div class="answer_pic"><img src="./Polygon 1.png" alt=""></div>
+            <button class="js-select-button">Society 5.0</button>
+            <button class="js-select-button">CyPhy</button>
+            <button class="js-select-button">SDGs</button>
+          </div>
+          <div class="js-answer-correct" id="correct3">
+            <h3>正解!</h3>
+            <div class="answer-text">
+            <p class="js-answer-a">A</p>
+              <p class="js-correct-answer">約79万人</p></div>
+          </div>
+          <div class="js-answer-wrong" id="wrong3">
+            <h3>不正解...</h3>
+            <div class="answer-text">
+            <p class="js-answer-a">A</p>
+              <p class="js-correct-answer">約79万人</p></div>
           </div>
           <div class="quiz_note">
             <img src="./assets-ph1-website/img/icon/icon-note.svg" alt="">
@@ -111,7 +149,7 @@
           </div>
         </div>
       </section>
-      <section>
+      <section class="js_quiz" quiz-deta="4">
         <div class="quiz_fifth">
           <h1>Q5</h1>
           <div class="quiz_text">
@@ -120,16 +158,25 @@
           <img src="./assets-ph1-website/img/quiz/img-quiz05.png" alt="">
           <h2>A</h2>
           <div class="answer_item">
-            <div class="answer_items"><p>Web3.0</p></div>
-            <div class="answer_pic"><img src="./Polygon 1.png" alt=""></div>
-            <div class="answer_items"><p>NFT</p></div>
-            <div class="answer_pic"><img src="./Polygon 1.png" alt=""></div>
-            <div class="answer_items"><p>メタバース</p></div>
-            <div class="answer_pic"><img src="./Polygon 1.png" alt=""></div>
+            <button class="js-select-button">Web3.0</button>
+            <button class="js-select-button">NFT</button>
+            <button class="js-select-button">メタバース</button>
+          </div>
+          <div class="js-answer-correct" id="correct4">
+            <h3>正解!</h3>
+            <div class="answer-text">
+            <p class="js-answer-a">A</p>
+              <p class="js-correct-answer">約79万人</p></div>
+          </div>
+          <div class="js-answer-wrong" id="wrong4">
+            <h3>不正解...</h3>
+            <div class="answer-text">
+            <p class="js-answer-a">A</p>
+              <p class="js-correct-answer">約79万人</p></div>
           </div>
         </div>
       </section>
-      <section>
+      <section class="js_quiz" quiz-deta="5">
         <div class="quiz_sixth">
           <h1>Q6</h1>
           <div class="quiz_text">
@@ -138,12 +185,21 @@
           <img src="./assets-ph1-website/img/quiz/img-quiz06.png" alt="">
           <h2>A</h2>
           <div class="answer_item">
-            <div class="answer_items"><p>約2倍</p></div>
-            <div class="answer_pic"><img src="./Polygon 1.png" alt=""></div>
-            <div class="answer_items"><p>約5倍</p></div>
-            <div class="answer_pic"><img src="./Polygon 1.png" alt=""></div>
-            <div class="answer_items"><p>約11倍</p></div>
-            <div class="answer_pic"><img src="./Polygon 1.png" alt=""></div>
+            <button class="js-select-button">約2倍</button>
+            <button class="js-select-button">約5倍</button>
+            <button class="js-select-button">約11倍</button>
+          </div>
+          <div class="js-answer-correct" id="correct5">
+            <h3>正解!</h3>
+            <div class="answer-text">
+            <p class="js-answer-a">A</p>
+              <p class="js-correct-answer"></p></div>
+          </div>
+          <div class="js-answer-wrong" id="wrong5">
+            <h3>不正解...</h3>
+            <div class="answer-text">
+            <p class="js-answer-a">A</p>
+              <p class="js-correct-answer">約79万人</p></div>
           </div>
           <div class="quiz_note">
             <img src="./assets-ph1-website/img/icon/icon-note.svg" alt="">
@@ -191,6 +247,6 @@
     
   </footer>
 </div>
-
+<script src="./quiz.js"></script>
 </body>
 </html>
