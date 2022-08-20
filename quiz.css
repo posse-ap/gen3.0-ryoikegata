@@ -1,0 +1,386 @@
+.quiz_title {
+  background-image: url(./assets-ph1-website/img/quiz/bg-hero.jpg);
+  padding: 80px;
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+}
+.quiz_title h1{
+  color: #eee;
+  font-weight: 700;
+  font-size: 60px;
+  font-family: 'Noto Sans JP';
+  font-style: normal;
+  margin-right: 1000px;
+  margin-top: 12px;
+}
+.quiz_title p{
+  color: #eee;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: 'Noto Sans JP';
+  font-style: normal;
+  padding-top:178px ;
+  margin-right: 1000px;
+}
+.quiz_first img{
+  width: 718px;
+  height: 357px;
+  margin-top: 64px;
+}
+.quiz_second img{
+  width: 458px;
+  height: 358px;
+  margin-top: 64px;
+}
+.quiz_third img{
+  width: 552px;
+  height: 357px;
+  margin-top: 64px;
+}
+.quiz_fourth img{
+  width: 520px;
+  height: 352px;
+  margin-top: 64px;
+}
+.quiz_fifth img{
+  width: 561px;
+  height: 324px;
+  margin-top: 64px;
+}
+.quiz_sixth img{
+  width: 718px;
+  height: 381px;
+  margin-top: 64px;
+}
+.quiz_sixth{
+  margin-bottom: 140px;
+}
+.quiz_first h1{
+  width: 85px;
+  height: 54px;
+  color: #ffffff;
+  background-color: #0071BC;
+  font-size: 36px;
+  font-weight: 700;
+  font-family: 'Plus Jakarta Sans';
+font-style: normal;
+ margin-left: 228px;
+ margin-top: 120px;
+ line-height: 150%;
+ border-radius: 8px;
+ padding-top: 8px;
+ padding-bottom: 8px;
+}
+.quiz_text p{
+  font-size: 36px;
+  font-weight: 700;
+  width: 985px;
+  height: 108px;
+  text-align: justify;
+  margin-left: 228px;
+  font-family: 'Noto Sans JP';
+font-style: normal;
+margin-top: 24px;
+}
+.quiz_first h2{
+  width: 58px;
+  height: 54px;
+  color: #ffffff;
+  background-color: #E34E70;
+  font-size: 36px;
+  font-weight: 700;
+  font-family: 'Plus Jakarta Sans';
+font-style: normal;
+margin-left: 228px;
+margin-top: 64px;
+padding-top: 16px;
+border-radius: 8px;
+}
+.answer_item{
+  display: flex;
+  justify-content:center;
+  margin-top: 16px;
+  margin-right: 24px;
+  width: 984px;
+  margin-left: 228px;
+}
+.answer_items{
+  margin-left: 24px;
+ border-radius: 8px;
+
+ height: 80px;
+ border: 5px solid #EEEEEE;
+}
+.js-select-button0{
+  width: 312px;
+ height: 80px;
+  text-align: left;
+  font-family: 'Noto Sans JP';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 180%;
+  padding-left: 24px;
+  background-color: #fff;
+  margin-left: 24px;
+  border-radius: 8px;
+ 
+  height: 80px;
+  border: 5px solid #EEEEEE;
+}
+.js-select-button1{
+  width: 312px;
+ height: 80px;
+  text-align: left;
+  font-family: 'Noto Sans JP';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 180%;
+  padding-left: 24px;
+  background-color: #fff;
+  margin-left: 24px;
+  border-radius: 8px;
+ 
+  height: 80px;
+  border: 5px solid #EEEEEE;
+}
+.js-select-button2{
+  width: 312px;
+ height: 80px;
+  text-align: left;
+  font-family: 'Noto Sans JP';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 180%;
+  padding-left: 24px;
+  background-color: #fff;
+  margin-left: 24px;
+  border-radius: 8px;
+ 
+  height: 80px;
+  border: 5px solid #EEEEEE;
+}
+.js-select-button3{
+  width: 312px;
+ height: 80px;
+  text-align: left;
+  font-family: 'Noto Sans JP';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 180%;
+  padding-left: 24px;
+  background-color: #fff;
+  margin-left: 24px;
+  border-radius: 8px;
+ 
+  height: 80px;
+  border: 5px solid #EEEEEE;
+}
+.js-select-button4{
+  width: 312px;
+ height: 80px;
+  text-align: left;
+  font-family: 'Noto Sans JP';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 180%;
+  padding-left: 24px;
+  background-color: #fff;
+  margin-left: 24px;
+  border-radius: 8px;
+ 
+  height: 80px;
+  border: 5px solid #EEEEEE;
+}
+.js-select-button5{
+  width: 312px;
+ height: 80px;
+  text-align: left;
+  font-family: 'Noto Sans JP';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 180%;
+  padding-left: 24px;
+  background-color: #fff;
+  margin-left: 24px;
+  border-radius: 8px;
+ 
+  height: 80px;
+  border: 5px solid #EEEEEE;
+}
+.quiz_note{
+  display: flex;
+  width: 984px;
+  height: 80px;
+  margin-left: 228px;
+  background-color: #F6F6F6;
+  margin-top: 16px;
+  border-radius: 8px;
+}
+.quiz_note img{
+  width: 25px;
+  height: 16px;
+  margin-left: 24px;
+  margin-bottom: 20px;
+  transform: translateY(-220%);
+}
+.quiz_note p{
+  margin-left: 16px;
+  margin-top: 24px;
+}
+.quiz_second h1{
+  width: 85px;
+  height: 54px;
+  color: #ffffff;
+  background-color: #0071BC;
+  font-size: 36px;
+  font-weight: 700;
+  font-family: 'Plus Jakarta Sans';
+font-style: normal;
+ margin-left: 228px;
+ margin-top: 120px;
+ line-height: 150%;
+ border-radius: 8px;
+ padding-top: 8px;
+ padding-bottom: 8px;
+}
+.quiz_third h1{
+  width: 85px;
+  height: 54px;
+  color: #ffffff;
+  background-color: #0071BC;
+  font-size: 36px;
+  font-weight: 700;
+  font-family: 'Plus Jakarta Sans';
+font-style: normal;
+ margin-left: 228px;
+ margin-top: 120px;
+ line-height: 150%;
+ border-radius: 8px;
+ padding-top: 8px;
+ padding-bottom: 8px;
+}
+.quiz_fourth h1{
+  width: 85px;
+  height: 54px;
+  color: #ffffff;
+  background-color: #0071BC;
+  font-size: 36px;
+  font-weight: 700;
+  font-family: 'Plus Jakarta Sans';
+font-style: normal;
+ margin-left: 228px;
+ margin-top: 120px;
+ line-height: 150%;
+ border-radius: 8px;
+ padding-top: 8px;
+ padding-bottom: 8px;
+}
+.quiz_fifth h1{
+  width: 85px;
+  height: 54px;
+  color: #ffffff;
+  background-color: #0071BC;
+  font-size: 36px;
+  font-weight: 700;
+  font-family: 'Plus Jakarta Sans';
+font-style: normal;
+ margin-left: 228px;
+ margin-top: 120px;
+ line-height: 150%;
+ border-radius: 8px;
+ padding-top: 8px;
+ padding-bottom: 8px;
+}
+.quiz_sixth h1{
+  width: 85px;
+  height: 54px;
+  color: #ffffff;
+  background-color: #0071BC;
+  font-size: 36px;
+  font-weight: 700;
+  font-family: 'Plus Jakarta Sans';
+font-style: normal;
+ margin-left: 228px;
+ margin-top: 120px;
+ line-height: 150%;
+ border-radius: 8px;
+ padding-top: 8px;
+ padding-bottom: 8px;
+}
+.quiz_second h2{
+  width: 58px;
+  height: 54px;
+  color: #ffffff;
+  background-color: #E34E70;
+  font-size: 36px;
+  font-weight: 700;
+  font-family: 'Plus Jakarta Sans';
+font-style: normal;
+margin-left: 228px;
+margin-top: 64px;
+padding-top: 16px;
+border-radius: 8px;
+}
+.quiz_third h2{
+  width: 58px;
+  height: 54px;
+  color: #ffffff;
+  background-color: #E34E70;
+  font-size: 36px;
+  font-weight: 700;
+  font-family: 'Plus Jakarta Sans';
+font-style: normal;
+margin-left: 228px;
+margin-top: 64px;
+padding-top: 16px;
+border-radius: 8px;
+}
+.quiz_fourth h2{
+  width: 58px;
+  height: 54px;
+  color: #ffffff;
+  background-color: #E34E70;
+  font-size: 36px;
+  font-weight: 700;
+  font-family: 'Plus Jakarta Sans';
+font-style: normal;
+margin-left: 228px;
+margin-top: 64px;
+padding-top: 16px;
+border-radius: 8px;
+}
+.quiz_fifth h2{
+  width: 58px;
+  height: 54px;
+  color: #ffffff;
+  background-color: #E34E70;
+  font-size: 36px;
+  font-weight: 700;
+  font-family: 'Plus Jakarta Sans';
+font-style: normal;
+margin-left: 228px;
+margin-top: 64px;
+padding-top: 16px;
+border-radius: 8px;
+}
+.quiz_sixth h2{
+  width: 58px;
+  height: 54px;
+  color: #ffffff;
+  background-color: #E34E70;
+  font-size: 36px;
+  font-weight: 700;
+  font-family: 'Plus Jakarta Sans';
+font-style: normal;
+margin-left: 228px;
+margin-top: 64px;
+padding-top: 16px;
+border-radius: 8px;
+}
