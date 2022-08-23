@@ -7,7 +7,7 @@
 
 {
 
-const quiz = [
+let quiz = [
   {
     Number: '0',
     Text: '日本のIT人材が2030年には最大どれくらい不足すると言われているでしょうか？',
@@ -71,52 +71,52 @@ const quiz = [
 const main = document.querySelector('.quiz_main');
 
 function createQuiz(i){
-
+  
   let page = ` <section class="js_quiz">
-    <h1>Q${i+1}</h1>
-    <div class="quiz_text">
-    <p>${quiz[i].Text}</p>
+  <h1>Q${i+1}</h1>
+  <div class="quiz_text">
+  <p>${quiz[i].Text}</p>
   </div>
-    <img src="${quiz[i].Img}" alt="">
-    <h2>A</h2>
-    <div class="answer_item" >
-        <button class="js-select-button${i}">${quiz[i].Select1}</button>
-      <button class="js-select-button${i}">${quiz[i].Select2}</button>
-      <button class="js-select-button${i}" >${quiz[i].Select3}</button>
-    </div>
-    <div class="js-answer-correct" id="correct${i}">
-      <h3>正解!</h3>
-      <div class="answer-text">
-      <p class="js-answer-a">A</p>
-        <p class="js-correct-answer">${quiz[i].Answer}</p></div>
-    </div>
-    <div class="js-answer-wrong" id="wrong${i}">
-      <h3>不正解...</h3>
-      <div class="answer-text">
-      <p class="js-answer-a">A</p>
-        <p class="js-correct-answer">${quiz[i].Answer}</p></div>
-    </div>
-    ${createNote(i)}
-    </div>
-    </section>`;
-
-
+  <img src="${quiz[i].Img}" alt="">
+  <h2>A</h2>
+  <div class="answer_item" >
+  <button class="js-select-button${i}">${quiz[i].Select1}</button>
+  <button class="js-select-button${i}">${quiz[i].Select2}</button>
+  <button class="js-select-button${i}" >${quiz[i].Select3}</button>
+  </div>
+  <div class="js-answer-correct" id="correct${i}">
+  <h3>正解!</h3>
+  <div class="answer-text">
+  <p class="js-answer-a">A</p>
+  <p class="js-correct-answer">${quiz[i].Answer}</p></div>
+  </div>
+  <div class="js-answer-wrong" id="wrong${i}">
+  <h3>不正解...</h3>
+  <div class="answer-text">
+  <p class="js-answer-a">A</p>
+  <p class="js-correct-answer">${quiz[i].Answer}</p></div>
+  </div>
+  ${createNote(i)}
+  </div>
+  </section>`;
+  
+  
   main.insertAdjacentHTML('beforeend',page);
   
-
+  
 }
 
 function createNote(i){
-const noteHtml=`<div class="quiz_note">
-      <img src="./assets-ph1-website/img/icon/icon-note.svg" alt="">
-     <p>${quiz[i].quote}</p>
-    </div>`
-
-    if(quiz[i].quote===undefined){
-      return "";
-    }else{
-      return noteHtml;
-    }
+  const noteHtml=`<div class="quiz_note">
+  <img src="./assets-ph1-website/img/icon/icon-note.svg" alt="">
+  <p>${quiz[i].quote}</p>
+  </div>`
+  
+  if(quiz[i].quote===undefined){
+    return "";
+  }else{
+    return noteHtml;
+  }
 }
 
 
@@ -159,6 +159,21 @@ const noteHtml=`<div class="quiz_note">
           })
         });
       };
+
+
+
+      const shuffle = ([...array]) => {
+        for (let i = array.length - 1; i >= 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+      }      
+
+
+      quiz = shuffle(quiz);
+
+
       for(let i=0;i<quiz.length;i++){
         createQuiz(i);
         clickButton(i);
