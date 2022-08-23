@@ -1,6 +1,12 @@
 'use strict';
 
+
+
+
+
+
 {
+
 const quiz = [
   {
     Number: '0',
@@ -62,46 +68,99 @@ const quiz = [
   
 ];
 
-//   function bottonClick(){
-//   const selectQuestion = document.querySelectorAll('.js-select-botton');
-//   const selectedBox =document.querySelectorAll('.js-answer-box');
-//   const selectedText = document.querySelectorAll('.js-correct-text');
-//   const selectedAnswer= document.querySelectorAll('js-correct-answer');
+const main = document.querySelector('.quiz_main');
+
+function createQuiz(i){
+
+  let page = ` <section class="js_quiz">
+    <h1>Q${i+1}</h1>
+    <div class="quiz_text">
+    <p>${quiz[i].Text}</p>
+  </div>
+    <img src="${quiz[i].Img}" alt="">
+    <h2>A</h2>
+    <div class="answer_item" >
+        <button class="js-select-button${i}">${quiz[i].Select1}</button>
+      <button class="js-select-button${i}">${quiz[i].Select2}</button>
+      <button class="js-select-button${i}" >${quiz[i].Select3}</button>
+    </div>
+    <div class="js-answer-correct" id="correct${i}">
+      <h3>正解!</h3>
+      <div class="answer-text">
+      <p class="js-answer-a">A</p>
+        <p class="js-correct-answer">${quiz[i].Answer}</p></div>
+    </div>
+    <div class="js-answer-wrong" id="wrong${i}">
+      <h3>不正解...</h3>
+      <div class="answer-text">
+      <p class="js-answer-a">A</p>
+        <p class="js-correct-answer">${quiz[i].Answer}</p></div>
+    </div>
+    ${createNote(i)}
+    </div>
+    </section>`;
 
 
-
-//     if(quiz[0].Answer === selected){
-//       classList.add("correct");
-//   }else{
-//     classList.add("not-correct");
-// }
-//   }
-function clickButton(i) {
-  const btn = document.querySelectorAll(`.js-select-button${i}`);
-  const correct = document.getElementById(`correct${i}`);
-  const wrong = document.getElementById(`wrong${i}`);
-  const quizAnswer =quiz[i].Answer;
-  let btnClicked;
+  main.insertAdjacentHTML('beforeend',page);
   
-  btn.forEach((element) => {
-    element.addEventListener('click', () => {
-      const clickedAnswer = element.innerHTML;
 
-      if (btnClicked !== true) {
-        element.classList.add('js-selected');
-        if (clickedAnswer === quizAnswer) {
-          correct.classList.add('js-display');
-        } else {
-          wrong.classList.add('js-display');
-        }
+}
 
+function createNote(i){
+const noteHtml=`<div class="quiz_note">
+      <img src="./assets-ph1-website/img/icon/icon-note.svg" alt="">
+     <p>${quiz[i].quote}</p>
+    </div>`
+
+    if(quiz[i].quote===undefined){
+      return "";
+    }else{
+      return noteHtml;
+    }
+}
+
+
+
+//   function bottonClick(){
+  //   const selectQuestion = document.querySelectorAll('.js-select-botton');
+  //   const selectedBox =document.querySelectorAll('.js-answer-box');
+  //   const selectedText = document.querySelectorAll('.js-correct-text');
+  //   const selectedAnswer= document.querySelectorAll('js-correct-answer');
+  
+  
+  
+  //     if(quiz[0].Answer === selected){
+    //       classList.add("correct");
+    //   }else{
+      //     classList.add("not-correct");
+      // }
+      //   }
+      function clickButton(i) {
+        const btn = document.querySelectorAll(`.js-select-button${i}`);
+        const correct = document.getElementById(`correct${i}`);
+        const wrong = document.getElementById(`wrong${i}`);
+        const quizAnswer =quiz[i].Answer;
+        let btnClicked;
+        
+        btn.forEach((element) => {
+          element.addEventListener('click', () => {
+            const clickedAnswer = element.innerHTML;
+            
+            if (btnClicked !== true) {
+              element.classList.add('js-selected');
+              if (clickedAnswer === quizAnswer) {
+                correct.classList.add('js-display');
+              } else {
+                wrong.classList.add('js-display');
+              }
+              
+            }
+            btnClicked = true;
+          })
+        });
+      };
+      for(let i=0;i<quiz.length;i++){
+        createQuiz(i);
+        clickButton(i);
       }
-      btnClicked = true;
-    })
-  });
-};
-for(let i=0;i<=5;i++){
-clickButton(i);
-
-};
 }

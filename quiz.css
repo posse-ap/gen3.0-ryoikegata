@@ -23,7 +23,7 @@
   padding-top:178px ;
   margin-right: 1000px;
 }
-.quiz_first img{
+.js_quiz img{
   width: 718px;
   height: 357px;
   margin-top: 64px;
@@ -56,7 +56,7 @@
 .quiz_sixth{
   margin-bottom: 140px;
 }
-.quiz_first h1{
+.js_quiz h1{
   width: 85px;
   height: 54px;
   color: #ffffff;
@@ -83,7 +83,7 @@ font-style: normal;
 font-style: normal;
 margin-top: 24px;
 }
-.quiz_first h2{
+.js_quiz h2{
   width: 58px;
   height: 54px;
   color: #ffffff;
