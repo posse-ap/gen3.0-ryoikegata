@@ -24,9 +24,23 @@
        <li class="nav-item-sns"><a href=""><img src="./assets-ph1-website/img/icon/icon-instagram.svg" alt=""></a></li>
       </ul> 
      </nav>
+     <div class="hamburger" id="hamburger">
+      <span id="hamburger-top"></span>
+      <span id="hamburger-bottom"></span>
+     </div>
     </div>
+
+
+    <div id="hamburger-content">
+      <ul>
+        <li><a href="./index.html" id="content-item-one" class="item-list">POSSEとは</a></li>
+        <li><a href="./quiz.html" id="content-item-two" class="item-list">クイズ</a></li>
+      </ul>
+    </div>
+    </div>
+
   </header>
-  <main>
+  <main id="main">
    <div class="quiz_title">
       <p>POSSE課題</p>
       <h1>クイズ</h1>
@@ -52,10 +66,10 @@
     </div>
     
   </main>
-  <footer class="footer">
+  <footer class="footer" id="footer">
     <div class="footer-border">
     <div class="footer-inner">
-    <div class="footer-logo"><img src="./assets-ph1-website/img/logo.svg" alt=""></div>
+    <div class="footer-logo"><img src="./assets-ph1-website/img/logo.svg" alt="" id="footer-logo"></div>
     <div class="footer-link">
       <a>POSSE 公式サイト<i class="fas fa-external-link-alt my-color"></i></a>
     </div>
@@ -67,12 +81,25 @@
     </div>
     </div>
     </div>
-    <div class="copyright">
+    <div class="copyright" id="copyright">
       <a>©︎2022 POSSE</a>
     </div>
     
   </footer>
+  <div class="top_banner" id="banner">
+    <div class="banner_icon">
+   <img src="./assets-ph1-website/img/icon/icon-line.svg" alt=""></div>
+   <a>POSSE公式LINEで<br>最新情報をGET!</a>
+   <div class="banner_border">
+   <div class="banner_link">
+    <div class="banner_link_items"></div>
+    <div class="banner_link_item"></div>
+  </div>
+  <div class="banner_link_small"></div>
+  <div class="banner_link_small_inner"></div>
+  </div>
 </div>
+<script src="./common.js"></script>
 <script src="./quiz.js"></script>
 </body>
 </html>

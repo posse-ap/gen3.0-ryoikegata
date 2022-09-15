@@ -86,3 +86,16 @@ line-height: 180%;
 color: #333333;
 margin-top: 6px;
 }
+.js-main-quiz{
+  display: none;
+}
+@media(max-width:375px){
+  .js-answer-correct{
+    width: 343px;
+    margin-left: 16px;
+  }
+  .js-answer-wrong{
+    width: 343px;
+    margin-left: 16px;
+  }
+}

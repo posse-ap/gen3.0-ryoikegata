@@ -153,7 +153,7 @@ function createNote(i){
               } else {
                 wrong.classList.add('js-display');
               }
-              
+            
             }
             btnClicked = true;
           })
@@ -179,3 +179,7 @@ function createNote(i){
         clickButton(i);
       }
 }
+
+
+
+
