@@ -7,6 +7,7 @@
   <title>posseウェブサイト</title>
   <link rel="stylesheet" href="./reset.css">
  <link rel="stylesheet" href="./style.css">
+ <link rel="stylesheet" href="./responsive.css">
  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
  <link rel="stylesheet" href="https://fonts.google.com/">
 </head>
@@ -22,9 +23,23 @@
        <li class="nav-item-sns"><a href=""><img src="./assets-ph1-website/img/icon/icon-instagram.svg" alt=""></a></li>
       </ul> 
      </nav>
+     <div class="hamburger" id="hamburger">
+      <span id="hamburger-top"></span>
+      <span id="hamburger-bottom"></span>
+     </div>
     </div>
+
+
+    <div id="hamburger-content">
+      <ul>
+        <li><a href="./index.html" id="content-item-one" class="item-list">POSSEとは</a></li>
+        <li><a href="./quiz.html" id="content-item-two" class="item-list">クイズ</a></li>
+      </ul>
+    </div>
+
+
   </header>
-  <main>
+  <main class="main-page" id="main">
     <div class="main">
       <div class="main-text">
         <a>学生プログラミングコミュニティ POSSE（ポッセ）</a>
@@ -48,9 +63,9 @@
       </div>
         <div class="colum-item">
         <h1>
-          学生プログラミングコミュニティ「POSSE(ポッセ)」は、人格とプログラ<br>ミング、二つの面での成長をスローガンに活動しており、大学生だけが集<br>まって学びを深めるコミュニティです。<br>
-          プログラミングだけではありません。オフラインでのイベントや、旅行な<br>ど様々な企画を行っています！<br>
-          それらを通じて、夏休みの大半をPOSSEで出来た仲間と過ごす人もたくさ<br>んいるほどメンバーとの仲が深まります。</h1>
+          学生プログラミングコミュニティ「POSSE(ポッセ)」は、人格とプログラ<br class="none">ミング、二つの面での成長をスローガンに活動しており、大学生だけが集<br class="none">まって学びを深めるコミュニティです。<br>
+          プログラミングだけではありません。オフラインでのイベントや、旅行な<br class="none">ど様々な企画を行っています！<br>
+          それらを通じて、夏休みの大半をPOSSEで出来た仲間と過ごす人もたくさ<br class="none">んいるほどメンバーとの仲が深まります。</h1>
         </div>
       </div>
     </div>
@@ -72,10 +87,10 @@
     </div>
     
   </main>
-  <footer class="footer">
+  <footer class="footer" id="footer">
     <div class="footer-border">
     <div class="footer-inner">
-    <div class="footer-logo"><img src="./assets-ph1-website/img/logo.svg" alt=""></div>
+    <div class="footer-logo" id="footer-logo"><img src="./assets-ph1-website/img/logo.svg" alt=""></div>
     <div class="footer-link">
       <a>POSSE 公式サイト<i class="fas fa-external-link-alt my-color"></i></a>
     </div>
@@ -87,12 +102,12 @@
     </div>
     </div>
     </div>
-    <div class="copyright">
+    <div class="copyright" id="copyright">
       <a>©︎2022 POSSE</a>
     </div>
     
   </footer>
-  <div class="top_banner">
+  <div class="top_banner" id="banner">
     <div class="banner_icon">
    <img src="./assets-ph1-website/img/icon/icon-line.svg" alt=""></div>
    <a>POSSE公式LINEで<br>最新情報をGET!</a>
@@ -105,6 +120,6 @@
   <div class="banner_link_small_inner"></div>
   </div>
 </div>
-
+ <script src="./common.js"></script>
 </body>
 </html>
