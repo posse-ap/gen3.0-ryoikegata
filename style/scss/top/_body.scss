@@ -1,0 +1,8 @@
+@use "../variables" as v;
+@use "../mixin" as m;
+
+
+body{
+  width: 100%;
+  @include m.font;
+}

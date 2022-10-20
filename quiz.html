@@ -1,105 +1,82 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>posseウェブサイト</title>
-  <link rel="stylesheet" href="./reset.css">
- <link rel="stylesheet" href="./style.css">
- <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
- <link rel="stylesheet" href="./quiz.css">
- <link rel="stylesheet" href="./quiz-move.css">
-</head>
-<body> 
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ph1</title>
+    <link rel="stylesheet" href="https://fonts.google.com" />
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./style/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__inner">
+        <img
+          class="header__inner__logo"
+          src="./assets-ph1-website/img/logo.svg"
+          alt=""
+        />
+        <nav class="header__inner__nav">
+          <ul class="header__inner__nav__items">
+            <li>
+              <a href="./index.html" class="header__inner__nav__items__link">POSSEとは</a>
+            </li>
+            <li>
+              <a href="./quiz.html" class="header__inner__nav__items__link">クイズ</a>
+            </li>
+            <li>
+              <img
+                src="./assets-ph1-website/img/icon/icon-twitter.svg"
+                alt=""
+              />
+            </li>
+            <li>
+              <img
+                src="./assets-ph1-website/img/icon/icon-instagram.svg"
+                alt=""
+              />
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="title">
+        <p>POSSE課題</p>
+        <h1>ITクイズ</h1>
+      </section>
+      <section class="quiz"></section>
 
-  <header class="header">
-    <div class="header-inner">
-     <div class="header-img"><img src="./assets-ph1-website/img/logo.svg" alt=""></div>
-     <nav class="globalNav">
-      <ul class="nav-items">
-       <li class="nav-item"><a herf="">POSSEとは</a></li>
-       <li class="nav-item"><a herf="">クイズ</a></li>
-       <li class="nav-item-sns"><a href=""><img src="./assets-ph1-website/img/icon/icon-twitter.svg" alt=""></a></li>
-       <li class="nav-item-sns"><a href=""><img src="./assets-ph1-website/img/icon/icon-instagram.svg" alt=""></a></li>
-      </ul> 
-     </nav>
-     <div class="hamburger" id="hamburger">
-      <span id="hamburger-top"></span>
-      <span id="hamburger-bottom"></span>
-     </div>
-    </div>
-
-
-    <div id="hamburger-content">
-      <ul>
-        <li><a href="./index.html" id="content-item-one" class="item-list">POSSEとは</a></li>
-        <li><a href="./quiz.html" id="content-item-two" class="item-list">クイズ</a></li>
-      </ul>
-    </div>
-    </div>
-
-  </header>
-  <main id="main">
-   <div class="quiz_title">
-      <p>POSSE課題</p>
-      <h1>クイズ</h1>
-    </div>
-    <div class="quiz_main">
-      
-    </div>
-    <div class="line">
-      <div class="line-inner">
-        <div class="line-title">
-          <div class="line-icon">
-          <img src="./assets-ph1-website/img/icon/icon-line.svg" alt=""></div>
-          <h1>POSSE 公式LINE</h1>
+      <section class="line">
+        <div class="line__inner">
+          <div class="line__inner__title">
+            <div class="line__inner__title__icon"></div>
+            <p>POSSE 公式LINE</p>
+          </div>
+          <div class="line__inner__text">
+            <p>
+              公式LINEにてご質問を随時受け付けております。<br>詳細やPOSSE最新情報につきましては、公式LINEにてお知らせ致しますので<br>下記ボタンより友達追加をお願いします！
+            </p>
+          </div>
+          <div class="line__inner__link">
+            <a href="">LINE追加</a>
+          </div>
         </div>
-        <div class="line-body">
-          <p>公式LINEにてご質問を随時受け付けております。<br>
-            詳細やPOSSE最新情報につきましては、公式LINEにてお知らせ致しますので<br>
-            下記ボタンより友達追加をお願いします！</p>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__inner">
+        <img class="footer__inner__logo" src="./assets-ph1-website/img/logo.svg" alt="" />
+        <p>POSSE 公式サイト</p>
+        <div class="footer__inner__icon">
+          <img src="./assets-ph1-website/img/icon/icon-twitter.svg" alt="" />
+          <img src="./assets-ph1-website/img/icon/icon-instagram.svg" alt="" />
         </div>
-          <a class="line-link" href="">LINE追加<i class="fas fa-external-link-alt my-color"></i></a>
+        <div class="footer__inner__copyright">
+          <p>©︎2022 POSSE</p>
         </div>
       </div>
-    </div>
-    
-  </main>
-  <footer class="footer" id="footer">
-    <div class="footer-border">
-    <div class="footer-inner">
-    <div class="footer-logo"><img src="./assets-ph1-website/img/logo.svg" alt="" id="footer-logo"></div>
-    <div class="footer-link">
-      <a>POSSE 公式サイト<i class="fas fa-external-link-alt my-color"></i></a>
-    </div>
-    <div class="footer-sns">
-      <ul class="footer-items">
-     <li class="footer-item"><img src="./assets-ph1-website/img/icon/icon-twitter.svg" alt=""></li>
-     <li class="footer-item"><img src="./assets-ph1-website/img/icon/icon-instagram.svg" alt=""></li>
-      </ul>
-    </div>
-    </div>
-    </div>
-    <div class="copyright" id="copyright">
-      <a>©︎2022 POSSE</a>
-    </div>
-    
-  </footer>
-  <div class="top_banner" id="banner">
-    <div class="banner_icon">
-   <img src="./assets-ph1-website/img/icon/icon-line.svg" alt=""></div>
-   <a>POSSE公式LINEで<br>最新情報をGET!</a>
-   <div class="banner_border">
-   <div class="banner_link">
-    <div class="banner_link_items"></div>
-    <div class="banner_link_item"></div>
-  </div>
-  <div class="banner_link_small"></div>
-  <div class="banner_link_small_inner"></div>
-  </div>
-</div>
-<script src="./common.js"></script>
-<script src="./quiz.js"></script>
-</body>
+    </footer>
+  </body>
 </html>
