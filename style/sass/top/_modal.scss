@@ -1,0 +1,79 @@
+@use "../global/variables" as v;
+@use "../global/mixin" as m;
+
+.modal {
+  width: 70%;
+  height: 70%;
+  z-index: 2;
+  background: v.$content-color;
+  position: absolute;
+  transition: all 0.4s;
+  margin:auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 20px;
+
+
+  &__button {
+    padding: 12px 60px;
+    background: linear-gradient(to right, v.$time-title-color, v.$button-color);
+    color: v.$content-color;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+  }
+
+  &__content{
+    display: flex;
+    justify-content: space-around;
+    width: 800px;
+
+
+    &__left{
+
+
+
+      &__what{
+
+      }
+
+      &__when{
+        display: flex;
+        flex-flow: column;
+
+        &__items{
+
+
+          &__item{
+            display: inline-block;
+            background: v.$background-color;
+          }
+        }
+      }
+    }
+  }
+}
+.modal.hidden {
+  transform: translateY(-1000px);
+}
+
+.mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.mask.hidden {
+  display: none;
+}
+
+
+.checkbox{
+  @include m.checkbox;
+}

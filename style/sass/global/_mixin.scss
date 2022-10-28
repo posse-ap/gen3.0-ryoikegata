@@ -1,0 +1,9 @@
+@use "./variables" as v;
+
+
+@mixin checkbox {
+  color: v.$background-color;
+  background-color: v.$content-color;
+  padding: 10px;
+  display: inline-block;
+}

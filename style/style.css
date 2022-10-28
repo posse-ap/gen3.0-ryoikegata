@@ -1,0 +1,142 @@
+body {
+  height: 64px;
+  width: 100%;
+  overflow: hidden;
+  background-color: #f5f5f8;
+}
+
+.header {
+  background-color: #ffffff;
+}
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+}
+.header__inner__left__items {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+}
+.header__inner__left__items__item {
+  padding: 17px;
+}
+.header__inner__left__items__item__week {
+  color: #97b9d1;
+}
+.header__inner__right {
+  padding: 10px;
+}
+.header__inner__right__button {
+  padding: 12px 60px;
+  background: linear-gradient(to right, #0f71bc, #3ccfff);
+  color: #ffffff;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+.main {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+.main__left {
+  display: flex;
+  flex-flow: column;
+}
+.main__left__time {
+  display: flex;
+  justify-content: space-around;
+}
+.main__left__time__items {
+  width: 200px;
+  height: 150px;
+  margin-right: 20px;
+  background: #ffffff;
+  border-radius: 20px;
+}
+.main__left__time__items__title {
+  color: #0f71bc;
+  font-weight: 700;
+  font-size: 20px;
+  margin-top: 10px;
+}
+.main__left__time__items__number {
+  font-weight: 700;
+  font-size: 30px;
+  margin-top: 15px;
+}
+.main__left__time__items__hour {
+  color: #97b9d1;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.footer__month {
+  text-decoration: none;
+  color: black;
+}
+
+.modal {
+  width: 70%;
+  height: 70%;
+  z-index: 2;
+  background: #ffffff;
+  position: absolute;
+  transition: all 0.4s;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 20px;
+}
+.modal__button {
+  padding: 12px 60px;
+  background: linear-gradient(to right, #0f71bc, #3ccfff);
+  color: #ffffff;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+}
+.modal__content {
+  display: flex;
+  justify-content: space-around;
+  width: 800px;
+}
+.modal__content__left__when {
+  display: flex;
+  flex-flow: column;
+}
+.modal__content__left__when__items__item {
+  display: inline-block;
+  background: #f5f5f8;
+}
+
+.modal.hidden {
+  transform: translateY(-1000px);
+}
+
+.mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.mask.hidden {
+  display: none;
+}
+
+.checkbox {
+  color: #f5f5f8;
+  background-color: #ffffff;
+  padding: 10px;
+  display: inline-block;
+}/*# sourceMappingURL=style.css.map */

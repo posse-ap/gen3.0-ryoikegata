@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>webapp</title>
+    <link rel="stylesheet" href="./style/reset.css" />
+    <link rel="stylesheet" href="./style/style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <div class="header__inner">
+        <div class="header__inner__left">
+          <ul class="header__inner__left__items">
+            <li class="header__inner__left__items__item">
+              <img src="./assets/logo.svg" alt="" />
+            </li>
+            <li class="header__inner__left__items__item">
+              <p class="header__inner__left__items__item__week">4th week</p>
+            </li>
+          </ul>
+        </div>
+        <div class="header__inner__right">
+          <button class="header__inner__right__button" id="modalButton">記録・投稿</button>
+        </div>
+      </div>
+    </div>
+
+
+    <!--modal-->
+
+<!--最初のページ-->
+    <div id="modal" class="modal hidden">
+      <button class="modal__close" id="closeButton">×</button>
+      <div class="modal__content">
+      <div class="modal__content__left">
+        <div class="modal__content__left__when">
+        <label for="date">学習日</label>
+      </div>
+      <div class="modal__content__left__what">
+        <label for="">学習コンテンツ（複数選択可）</label>
+        <div class="modal__content__left__what__items">
+        <label for="" class="modal__content__left__what__items__item">
+          <input type="checkbox" class="checkbox">
+          N予備校
+        </label>
+        <label for="" class="modal__content__left__what__items__item">
+          <input type="checkbox" class="checkbox">
+          ドットインストール
+        </label>
+        <label for="" class="modal__content__left__what__items__item">
+          <input type="checkbox" class="checkbox">
+          POSSE課題
+        </label>
+      </div>
+      </div>
+      <div class="modal__content__left__lang">
+        <label for="">学習言語(複数選択可）</label>
+        <div class="modal__content__left__lang__items">
+        <label for="" class="modal__content__left__lang__items__item">
+          <input type="checkbox" name="" id="" class="checkbox">HTML
+        </label>
+        <label for="" class="modal__content__left__lang__items__item">
+          <input type="checkbox" name="" id="" class="checkbox">CSS
+        </label>
+        <label for="" class="modal__content__left__lang__items__item">
+          <input type="checkbox" name="" id="" class="checkbox">JavaScript
+        </label>
+        <label for="" class="modal__content__left__lang__items__item">
+          <input type="checkbox" name="" id="" class="checkbox">PHP
+        </label>
+        <label for="" class="modal__content__left__lang__items__item">
+          <input type="checkbox" name="" id="" class="checkbox">Laravel
+        </label>
+        <label for="" class="modal__content__left__lang__items__item">
+          <input type="checkbox" name="" id="" class="checkbox">SQL
+        </label>
+        <label for="" class="modal__content__left__lang__items__item">
+          <input type="checkbox" name="" id="" class="checkbox">SHELL
+        </label>
+        <label for="" class="modal__content__left__lang__items__item">
+          <input type="checkbox" name="" id="" class="checkbox">情報システム基礎知識（その他）
+        </label>
+      </div>
+      </div>
+      </div>
+      <!--left end-->
+      <div class="modal__content__right">
+        <label for="">学習時間
+        <input type="text">
+        <label for="">Twitter用コメント</label>
+        <input type="text">
+        <label for="">
+          <input type="checkbox" class="checkbox">TWitterにシェアする
+        </label>
+      </label>
+      </div>
+    </div>
+      <button class="modal__button" id="loadingButton">記録・投稿</button>
+    </div>
+    <div id="mask" class="mask hidden"></div>
+
+
+    <!--modal end-->
+
+
+    <div class="main">
+      <div class="main__left">
+        <div class="main__left__time">
+        <section class="main__left__time__items">
+          <p class="main__left__time__items__title">Today</p>
+          <p class="main__left__time__items__number">3</p>
+          <p class="main__left__time__items__hour">hour</p>
+        </section>
+        <section class="main__left__time__items">
+          <p class="main__left__time__items__title">Month</p>
+          <p class="main__left__time__items__number">120</p>
+          <p class="main__left__time__items__hour">hour</p>
+        </section>
+        <section class="main__left__time__items">
+          <p class="main__left__time__items__title">Total</p>
+          <p class="main__left__time__items__number">1348</p>
+          <p class="main__left__time__items__hour">hour</p>
+        </section>
+      </div>
+      <div class="main__left__chart">
+        <section class="chart__left">
+          <canvas id="chart_bar"></canvas>
+        </section>
+      </div>
+      </div>
+      <div class="main__right">
+        <section class="chart">
+          <h2>学習言語</h2>
+          <canvas></canvas>
+        </section>
+        <section class="chart">
+          <h2>学習コンテンツ</h2>
+          <canvas></canvas>
+        </section>
+      </div>
+    </div>
+    <div class="footer">
+      <a href="" class="footer__month">2022年 10月</a>
+    </div>
+    <script src="./script/modal.js"></script>
+  </body>
+</html>

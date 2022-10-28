@@ -1,0 +1,49 @@
+@use "../global/variables" as v;
+@use "../global/mixin" as m;
+
+.main{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+
+  &__left{
+    display: flex;
+    flex-flow: column;
+
+
+    &__time{
+      display: flex;
+      justify-content: space-around;
+
+      &__items{
+        width: 200px;
+        height: 150px;
+        margin-right: 20px;
+        background: v.$content-color;
+        border-radius: 20px;
+
+
+        &__title{
+          color: v.$time-title-color;
+          font-weight: 700;
+          font-size: 20px;
+          margin-top: 10px;
+        }
+
+
+        &__number{
+          font-weight: 700;
+          font-size: 30px;
+          margin-top: 15px;
+        }
+
+
+        &__hour{
+          color: v.$text-color;
+          font-size: 20px;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}
