@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ph1</title>
     <link rel="stylesheet" href="https://fonts.google.com" />
-    <link rel="stylesheet" href="../style/reset.css" />
-    <link rel="stylesheet" href="../style/style.css" />
+    <link rel="stylesheet" href="../sass/style.css" />
   </head>
   <body>
     <header class="header">
@@ -42,11 +41,13 @@
       </div>
     </header>
     <main>
-      <section class="title">
+      <section class="quiz__title">
         <p>POSSE課題</p>
         <h1>ITクイズ</h1>
       </section>
-      <section class="quiz"></section>
+      <section class="quiz">
+        <div class="quiz__main"></div>
+      </section>
 
       <section class="line">
         <div class="line__inner">
@@ -78,5 +79,6 @@
         </div>
       </div>
     </footer>
+    <script src="../script/quiz.js"></script>
   </body>
 </html>

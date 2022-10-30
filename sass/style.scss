@@ -1,2 +1,2 @@
-@use "./common/index" ;
-@use "./config/index" ;
+@use "common/index" as common;
+@use "config/index" as config;
