@@ -26,6 +26,6 @@
   const loadingButton = document.getElementById('loadingButton');
 
 
-  loadingButton.addEventListener('click',() =>{　
+  loadingButton.addEventListener('click',() =>{
   })
 }

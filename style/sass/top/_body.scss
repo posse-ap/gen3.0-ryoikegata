@@ -1,9 +1,0 @@
-@use "../global/variables" as v;
-@use "../global/mixin" as m;
-
-body{
-  height: 64px;
-  width: 100%;
-  overflow: hidden;
-  background-color: v.$background-color;
-}

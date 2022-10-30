@@ -1,0 +1,24 @@
+@use "../global/variables" as v;
+@use "../global/mixin" as m;
+
+body{
+  height: 64px;
+  width: 100%;
+  overflow: hidden;
+  background-color: v.$background-color;
+}
+
+
+input[type=checkbox].checkbox{
+  display: none;
+}
+
+label.modal__content__left__what__items__item{
+  border: 3px red solid;
+  padding: 5px;
+  margin: 30px;
+}
+
+input[type="checkbox"]:checked + label{
+  background: green;
+}

@@ -8,53 +8,31 @@
   background: v.$content-color;
   position: absolute;
   transition: all 0.4s;
-  margin:auto;
+  margin: auto;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   border-radius: 20px;
 
-
   &__button {
     padding: 12px 60px;
-    background: linear-gradient(to right, v.$time-title-color, v.$button-color);
+    background: v.$gradient-color;
     color: v.$content-color;
     border: none;
     border-radius: 40px;
     cursor: pointer;
   }
 
-  &__content{
+  &__content {
     display: flex;
     justify-content: space-around;
     width: 800px;
 
-
-    &__left{
-
-
-
-      &__what{
-
-      }
-
-      &__when{
-        display: flex;
-        flex-flow: column;
-
-        &__items{
-
-
-          &__item{
-            display: inline-block;
-            background: v.$background-color;
+    &__left {
           }
         }
       }
-    }
-  }
-}
 .modal.hidden {
   transform: translateY(-1000px);
 }
@@ -73,7 +51,6 @@
   display: none;
 }
 
-
-.checkbox{
+.checkbox {
   @include m.checkbox;
 }

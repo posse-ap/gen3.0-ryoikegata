@@ -46,4 +46,22 @@
       }
     }
   }
+
+  &__right{
+
+
+    &__chart{
+      display: flex;
+
+
+      &__lang{
+        display: block;
+      }
+
+
+      &__content{
+        display: block;
+      }
+    }
+  }
 }
