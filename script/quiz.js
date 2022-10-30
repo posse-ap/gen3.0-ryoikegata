@@ -7,7 +7,7 @@
     {
       Number: "0",
       Text: "日本のIT人材が2030年には最大どれくらい不足すると言われているでしょうか？",
-      Img: "./assets-ph1-website/img/quiz/img-quiz01.png",
+      Img: "./assets/img/quiz/img-quiz01.png",
       Select1: "約28万人",
       Select2: "約79万人",
       Select3: "約183万人",
@@ -17,7 +17,7 @@
     {
       Number: "1",
       Text: "既存業界のビジネスと、先進的なテクノロジーを結びつけて生まれた、新しいビジネスのことをなんと言うでしょう？",
-      Img: "./assets-ph1-website/img/quiz/img-quiz02.png",
+      Img: "./assets/img/quiz/img-quiz02.png",
       Select1: "INTECH",
       Select2: "BIZZTECH",
       Select3: "X-TECH",
@@ -26,7 +26,7 @@
     {
       Number: "2",
       Text: "IoTとは何の略でしょう？",
-      Img: "./assets-ph1-website/img/quiz/img-quiz03.png",
+      Img: "./assets/img/quiz/img-quiz03.png",
       Select1: "Internet of Things",
       Select2: "Integrate into Technology",
       Select3: "Information  on Tool",
@@ -35,7 +35,7 @@
     {
       Number: "3",
       Text: "日本が目指すサイバー空間とフィジカル空間を高度に融合させたシステムによって開かれる未来社会のことをなんと言うでしょうか？",
-      Img: "./assets-ph1-website/img/quiz/img-quiz04.png",
+      Img: "./assets/img/quiz/img-quiz04.png",
       Select1: "Society 5.0",
       Select2: "CyPhy",
       Select3: "SDGs",
@@ -45,7 +45,7 @@
     {
       Number: "4",
       Text: "イギリスのコンピューター科学者であるギャビン・ウッド氏が提唱した、ブロックチェーン技術を活用した「次世代分散型インターネット」のことをなんと言うでしょう？",
-      Img: "./assets-ph1-website/img/quiz/img-quiz05.png",
+      Img: "./assets/img/quiz/img-quiz05.png",
       Select1: "Web3.0",
       Select2: "NFT",
       Select3: "メタバース",
@@ -54,7 +54,7 @@
     {
       Number: "5",
       Text: "先進テクノロジー活用企業と出遅れた企業の収益性の差はどれくらいあると言われているでしょうか？",
-      Img: "./assets-ph1-website/img/quiz/img-quiz06.png",
+      Img: "./assets/img/quiz/img-quiz06.png",
       Select1: "約2倍",
       Select2: "約5倍",
       Select3: "約11倍",
@@ -99,7 +99,7 @@
 
   function createNote(i) {
     const noteHtml = `<div class="quiz_note">
-  <img src="./assets-ph1-website/img/icon/icon-note.svg" alt="">
+  <img src="./assets/img/icon/icon-note.svg" alt="">
   <p>${quiz[i].quote}</p>
   </div>`;
 
