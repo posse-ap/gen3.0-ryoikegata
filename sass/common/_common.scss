@@ -1,0 +1,91 @@
+@use "../global/variables" as v;
+@use "../global/mixin" as m;
+
+body {
+  height: 64px;
+  width: 100%;
+  overflow: hidden;
+  background-color: v.$background-color;
+}
+
+input[type="checkbox"].checkbox {
+  display: none;
+}
+
+label.modal__content__left__what__items__item {
+  border: 3px blue solid;
+  padding: 5px;
+  margin: 30px;
+}
+
+input[type="checkbox"]:checked + label.modal__content__left__what__items__item {
+  background: green;
+}
+
+//loading
+.loading {
+  font-size: 10px;
+  margin-top: 200px;
+  margin-left: 450px;
+  text-indent: -9999em;
+  width: 11em;
+  height: 11em;
+  border-radius: 50%;
+  background: -moz-linear-gradient(left, blue 10%, rgba(255, 255, 255, 0) 42%);
+  background: -webkit-linear-gradient(
+    left,
+    blue 10%,
+    rgba(255, 255, 255, 0) 42%
+  );
+  background: -o-linear-gradient(left, blue 10%, rgba(255, 255, 255, 0) 42%);
+  background: -ms-linear-gradient(left, blue 10%, rgba(255, 255, 255, 0) 42%);
+  background: linear-gradient(to right, blue 10%, rgba(255, 255, 255, 0) 42%);
+  position: relative;
+  -webkit-animation: load3 1.4s infinite linear;
+  animation: load3 1.4s infinite linear;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.loading:before {
+  width: 50%;
+  height: 50%;
+  border-radius: 100% 0 0 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+}
+.loading:after {
+  background: v.$content-color;
+  width: 75%;
+  height: 75%;
+  border-radius: 50%;
+  content: "";
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+@-webkit-keyframes load3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}

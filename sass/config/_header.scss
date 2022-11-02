@@ -1,0 +1,51 @@
+
+@use "../global/variables" as v;
+@use "../global/mixin" as m;
+
+
+.header{
+  background-color: v.$content-color;
+
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+
+
+    &__left{
+
+
+      &__items{
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+        align-items: center;
+
+
+        &__item{
+          padding: 17px;
+
+          &__week{
+            color: v.$text-color;
+          }
+        }
+      }
+    }
+
+
+    &__right{
+      padding: 10px;
+
+
+      &__button{
+        padding:12px 60px;
+        background: linear-gradient(to right,v.$time-title-color,v.$button-color);
+        color: v.$content-color;
+        border: none;
+        border-radius: 40px;
+        cursor: pointer;
+      }
+    }
+  }
+}

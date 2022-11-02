@@ -1,0 +1,11 @@
+@use "../global/variables" as v;
+@use "../global/mixin" as m;
+
+.footer{
+
+
+  &__month{
+    text-decoration: none;
+    color: black;
+  }
+}
