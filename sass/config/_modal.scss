@@ -28,9 +28,6 @@
     display: flex;
     justify-content: space-around;
     width: 800px;
-
-    &__left {
-          }
         }
       }
 .modal.hidden {
@@ -51,6 +48,7 @@
   display: none;
 }
 
-.checkbox {
-  @include m.checkbox;
+
+.hidden{
+  display: none;
 }

@@ -34,15 +34,21 @@
     <!--最初のページ-->
     <div id="modal" class="modal hidden">
       <button class="modal__close" id="closeButton">×</button>
-      <div class="modal__content">
+      <div class="modal__content" id="modalContent">
         <div class="modal__content__left">
           <div class="modal__content__left__when">
-            <label for="date">学習日</label>
+            <label for="data"
+              >学習日
+              <input type="text" id="data" />
+            </label>
           </div>
           <div class="modal__content__left__what">
             <label for="">学習コンテンツ（複数選択可）</label>
             <div class="modal__content__left__what__items">
-              <label for="checkbox" class="modal__content__left__what__items__item">
+              <label
+                for="checkbox"
+                class="modal__content__left__what__items__item"
+              >
                 <input type="checkbox" class="checkbox" id="checkbox" />
                 N予備校
               </label>
@@ -104,16 +110,46 @@
             <label for="">Twitter用コメント</label>
             <input type="text" />
             <label for="">
-              <input type="checkbox" class="checkbox" />TWitterにシェアする
+              <input type="checkbox" class="checkbox" />Twitterにシェアする
             </label>
           </label>
         </div>
       </div>
       <button class="modal__button" id="loadingButton">記録・投稿</button>
+      <div class="loading hidden" id="loading"></div>
+      <!--カレンダー-->
+
+      <table class="calendar hidden" id="calendar">
+        <thead>
+          <tr>
+            <th id="prev">&laquo;</th>
+            <th id="title" colspan="5">2020/10</th>
+            <th id="next">&raquo;</th>
+          </tr>
+          <tr>
+            <th class="day">Sun</th>
+            <th class="day">Mon</th>
+            <th class="day">Tue</th>
+            <th class="day">Wed</th>
+            <th class="day">Thu</th>
+            <th class="day">Fri</th>
+            <th class="day">Sat</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+        <tfoot>
+          <tr>
+            <th></th>
+            <th></th>
+            <th id="select" colspan="3" class="select__button">決定</th>
+            <th></th>
+          </tr>
+        </tfoot>
+      </table>
+
+      <!--modal end-->
     </div>
     <div id="mask" class="mask hidden"></div>
-
-    <!--modal end-->
 
     <div class="main">
       <div class="main__left">
@@ -136,22 +172,31 @@
         </div>
         <div class="main__left__chart">
           <section class="main__left__chart__bar">
-            <canvas id="chart__bar" class="main__left__chart__bar__canvas"></canvas>
+            <canvas
+              id="chart__bar"
+              class="main__left__chart__bar__canvas"
+            ></canvas>
           </section>
         </div>
       </div>
       <div class="main__right">
         <div class="main__right__chart">
-        <section class="main__right__chart__lang">
-          <h2>学習言語</h2>
-          <canvas id="chart__lang"></canvas>
-        </section>
-        <section class="chart__right__chart__content">
-          <h2>学習コンテンツ</h2>
-          <canvas id="chart__content"></canvas>
-        </section>
+          <section class="main__right__chart__lang">
+            <h2>学習言語</h2>
+            <canvas
+              id="chart__lang"
+              style="height: 400px; width: 300px"
+            ></canvas>
+          </section>
+          <section class="main__right__chart__content">
+            <h2>学習コンテンツ</h2>
+            <canvas
+              id="chart__content"
+              style="height: 400px; width: 300px"
+            ></canvas>
+          </section>
+        </div>
       </div>
-    </div>
     </div>
 
     <!--main end-->

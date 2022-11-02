@@ -1,0 +1,51 @@
+@use "../global/variables" as v;
+@use "../global/mixin" as m;
+
+table{
+  margin-left: 31%;
+  margin-top: 5%;
+  font-weight: bold;
+}
+
+th,td{
+  padding: 15px;
+  text-align: center;
+}
+
+.day{
+  font-weight: 100;
+  color: v.$text-color;
+}
+
+
+
+tbody td:first-child{
+  color: red;
+}
+
+tbody td:last-child{
+  color: blue;
+}
+
+
+td.click{
+  background: blue;
+}
+
+
+td.disabled{
+  opacity: 0.3;
+}
+
+
+.select__button{
+  background: v.$gradient-color;
+  border-radius: 20px;
+  color: v.$content-color;
+  width: 100px;
+}
+
+#prev,#next,td,#select{
+  cursor: pointer;
+}
+
