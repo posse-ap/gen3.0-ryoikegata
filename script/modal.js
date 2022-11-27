@@ -2,6 +2,7 @@
 
 {
   const button = document.getElementById("modalButton");
+
   const modal = document.getElementById("modal");
   const mask = document.getElementById("mask");
   const closeButton = document.getElementById("closeButton");
@@ -10,6 +11,8 @@
     modal.classList.remove("hidden");
     mask.classList.remove("hidden");
   });
+
+
 
   closeButton.addEventListener("click", () => {
     modal.classList.add("hidden");
@@ -108,6 +111,7 @@
         const tr = document.createElement("tr");
         week.forEach((date) => {
           const td = document.createElement("td");
+          td.classList.add(".data");
 
           td.textContent = date.date;
           if (date.isDisabled) {
@@ -135,6 +139,8 @@
       }
 
       createCalendar();
+
+      dataCheck();
     });
     document.getElementById("next").addEventListener("click", () => {
       month++;
@@ -142,31 +148,70 @@
         year++;
         month = 0;
       }
-
       createCalendar();
+
+
+      dataCheck();
     });
 
     createCalendar();
   }
 
-  //loading
-  function loading() {
-    const loadingButton = document.getElementById("loadingButton");
-    const loading = document.getElementById("loading");
-    const modalContent = document.getElementById("modalContent");
+  function dataCheck() {
+    let tdData = document.querySelectorAll("td");
+    const dataInput = document.getElementById("data");
+    tdData.forEach(function (datum) {
+      datum.addEventListener("click", () => {
+        modalContent.classList.remove("hidden");
+        calendar.classList.add("hidden");
+        loadingButton.classList.remove("hidden");
+        closeButton.classList.remove("hidden");
 
-    loadingButton.addEventListener("click", () => {
-      loading.classList.remove("hidden");
-      closeButton.classList.add("hidden");
-      loadingButton.classList.add("hidden");
-      modalContent.classList.add("hidden");
-
-      if (loading.classList.remove("hidden")) {
-        setTimeout(function () {
-          loading.classList.add("hidden");
-        }, 3000);
-      }
+        const today = document.getElementById("title");
+        dataInput.value = today.innerHTML + "/" + datum.innerHTML;
+      });
     });
   }
-  loading();
+  dataCheck();
+
+  //loading
+
+  const loading = document.getElementById("loading");
+  const loadingButton = document.getElementById("loadingButton");
+  const checkMark = document.getElementById("checkMark");
+  const twitter = document.getElementById("twitter");
+
+  function loader() {
+    loading.classList.remove("hidden");
+    closeButton.classList.add("hidden");
+    modalContent.classList.add("hidden");
+    loadingButton.classList.add("hidden");
+  }
+  function finish() {
+    loading.classList.add("hidden");
+    checkMark.classList.remove("hidden");
+    closeButton.classList.remove("hidden");
+  }
+
+  loadingButton.addEventListener("click", () => {
+    setTimeout(loader(), 3000);
+    setTimeout(finish, 3000);
+
+    if (twitter.checked) {
+      const textArea = document.getElementById("textArea");
+      const twitterContent = `${textArea.value}`;
+      window.open(`http://twitter.com/intent/tweet?&text=${twitterContent}`);
+    }
+  });
+  
+  const responsiveButton = document.getElementById('responsiveButton');
+
+  responsiveButton.addEventListener("click", () => {
+    modal.classList.remove("hidden");
+    mask.classList.remove("hidden");
+  });
+
+
 }
+
+

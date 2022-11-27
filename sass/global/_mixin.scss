@@ -1,2 +1,11 @@
 @use "./variables" as v;
 
+
+$mb:768px;
+
+@mixin mobile {
+  @media (max-width:$mb) {
+    @content;
+  }
+}
+

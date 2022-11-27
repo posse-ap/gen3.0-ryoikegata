@@ -1,7 +1,9 @@
 "use strict";
 
+
 //bar
 {
+  Chart.register(ChartDataLabels);
   (function () {
     let type = "bar";
 
@@ -42,8 +44,8 @@
       datasets: [
         {
           data: [
-            3, 3, 4, 4, 8, 3, 5, 5, 3, 7, 10, 2, 6, 5, 2, 1, 3, 5, 6, 4, 3, 7,
-            1, 11, 2, 4, 4, 1, 2, 3, 4,
+            3, 3, 4, 4, 8, 3, 5, 5, 3, 7, 6, 2, 6, 5, 2, 1, 3, 5, 6, 4, 3, 7,
+            1, 8, 2, 4, 4, 1, 2, 3, 4,
           ],
           backgroundColor: "blue",
           borderWidth: 0,
@@ -52,34 +54,30 @@
     };
 
     let options = {
-      legend: {
-        display: false,
-      },
+      responsive:true,
+      maintainAspectRatio:false,
       scales: {
-        xAxes: [
-          {
-            stacked: true,
-            gridLines: {
-              drawBorder: false,
-              display: false,
+        x:{
+          grid:{
+            display:false,
+            drawBorder:false,
+          }
+        },
+        y:{
+          ticks:{
+            callback:function(v){
+              return v + "h"
             },
           },
-        ],
-        yAxes: [
-          {
-            stacked: true,
-            gridLines: {
-              drawBorder: false,
-              display: false,
-            },
-            ticks: {
-              min: 0,
-              max: 12,
-            },
-          },
-        ],
-      },
+          grid:{
+            display:false,
+            drawBorder:false,
+          }
+        }
+      }
     };
+
+
 
     let ctx = document.getElementById("chart__bar").getContext("2d");
     let myChart = new Chart(ctx, {
@@ -91,7 +89,6 @@
 }
 
 //bar end
-
 //lang
 
 {
@@ -122,12 +119,24 @@
             "rgb(74,23,239)",
             "rgb(48,5,192)",
           ],
+          datalabels:{
+            color:"#ffffff",
+            formatter: (value, ctx) => {
+              return value + '%';
+          },
+          }
         },
       ],
     };
 
     let options = {
-      cutoutPercentage: 40,
+      responsive:true,
+      maintainAspectRatio:false,
+      plugins:{
+        legend:{
+          position:"bottom",
+        },
+      }
     };
 
     let ctx = document.getElementById("chart__lang").getContext("2d");
@@ -157,12 +166,24 @@
             "rgb(15,112,189)",
             "rgb(32,189,222)",
           ],
+          datalabels:{
+            color:"#ffffff",
+            formatter: (value, ctx) => {
+              return value + '%';
+          },
+          }
         },
       ],
     };
 
     let options = {
-      cutoutPercentage: 40,
+      responsive:true,
+      maintainAspectRatio:false,
+      plugins:{
+        legend:{
+          position:"bottom",
+        }
+      }
     };
 
     let ctx = document.getElementById("chart__content").getContext("2d");
