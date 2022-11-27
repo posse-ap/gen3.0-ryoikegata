@@ -37,6 +37,10 @@
     &__right{
       padding: 10px;
 
+      @include m.mobile{
+        display: none;
+      }
+
 
       &__button{
         padding:12px 60px;

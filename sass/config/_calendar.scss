@@ -5,6 +5,12 @@ table{
   margin-left: 31%;
   margin-top: 5%;
   font-weight: bold;
+
+
+  @include m.mobile{
+    margin: 0 auto;
+    margin-top: 30%;
+  }
 }
 
 th,td{
@@ -40,7 +46,7 @@ td.disabled{
 
 .select__button{
   background: v.$gradient-color;
-  border-radius: 20px;
+  border-radius: 40px;
   color: v.$content-color;
   width: 100px;
 }
