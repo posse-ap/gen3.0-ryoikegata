@@ -1,3 +1,22 @@
+<?php
+
+for ($i = 1; $i < 31; $i++ ){
+  $date = date('Y-m') . '-' . str_pad($i, 2, '0', STR_PAD_LEFT);
+  $bar_stmt = $pdo->query("SELECT SUM(study_time) as sum FROM studies WHERE study_date = '" . $date . "'");
+  // $bar_stmt->bindValue(':date' , "2023-03-05");
+$bar = $bar_stmt->fetch();
+$date_sum[] = $bar['sum'] ?? 0;
+};
+
+$language_stmt = $pdo->query("SELECT SUM(studies.study_time) , languages.language FROM studies JOIN languages ON studies.language_id = languages.id GROUP BY languages.language ");
+$languages = $language_stmt->fetchAll();
+
+
+$content_stmt = $pdo->query("SELECT SUM(studies.study_time) , contents.content FROM studies JOIN contents ON studies.content_id = contents.id GROUP BY contents.content ");
+$contents = $content_stmt->fetchAll();
+?>
+<script>
+
 "use strict";
 
 
@@ -43,9 +62,10 @@
       ],
       datasets: [
         {
-          data: [
-            3, 3, 4, 4, 8, 3, 5, 5, 3, 7, 6, 2, 6, 5, 2, 1, 3, 5, 6, 4, 3, 7,
-            1, 8, 2, 4, 4, 1, 2, 3, 4,
+          data: [<?php
+          foreach($date_sum as $date_data){
+            echo $date_data . ',';
+          }?>
           ],
           backgroundColor: "blue",
           borderWidth: 0,
@@ -97,18 +117,26 @@
 
     let data = {
       labels: [
-        "Javascript",
-        "CSS",
-        "PHP",
         "HTML",
-        "Larabel",
+        "CSS",
+        "Javascript",
+        "PHP",
+        "Laravel",
         "SQL",
         "SHELL",
-        "情報システム基礎知識（その他）",
+        "その他"
       ],
       datasets: [
         {
-          data: [48, 18, 10, 8, 6, 5, 4, 3],
+          data: [<?php
+          $sum = 0;
+          foreach($languages as $language){
+            $sum += $language['SUM(studies.study_time)'];
+          }
+          foreach($languages as $language){
+            echo intval($language['SUM(studies.study_time)']/$sum*100) . ',';
+          }
+            ?>],
           backgroundColor: [
             "rgb(4,69,236)",
             "rgb(15,112,189)",
@@ -160,7 +188,15 @@
       labels: ["ドットインストール", "N予備校", "POSSE課題"],
       datasets: [
         {
-          data: [42, 33, 25],
+          data: [<?php
+          $sum = 0;
+          foreach($contents as $content){
+            $sum += $content['SUM(studies.study_time)'];
+          }
+          foreach($contents as $content){
+            echo intval($content['SUM(studies.study_time)']/$sum*100) . ',';
+          }
+            ?>],
           backgroundColor: [
             "rgb(4,69,236)",
             "rgb(15,112,189)",
@@ -194,3 +230,5 @@
     });
   })();
 }
+
+</script>

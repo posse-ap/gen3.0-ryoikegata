@@ -552,7 +552,6 @@ td.disabled {
   border-radius: 50%;
   background: linear-gradient(to right, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
   position: relative;
-  -webkit-animation: load3 1.4s infinite linear;
   animation: load3 1.4s infinite linear;
   transform: translateZ(0);
 }
@@ -580,15 +579,6 @@ td.disabled {
   left: 0;
   bottom: 0;
   right: 0;
-}
-
-@-webkit-keyframes load3 {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
 }
 @keyframes load3 {
   0% {
@@ -630,16 +620,14 @@ td.disabled {
 }
 
 .label__checkbox:checked + .label__text .label__check {
-  -webkit-animation: check 0.5s cubic-bezier(0.895, 0.03, 0.685, 0.22) forwards;
-          animation: check 0.5s cubic-bezier(0.895, 0.03, 0.685, 0.22) forwards;
+  animation: check 0.5s cubic-bezier(0.895, 0.03, 0.685, 0.22) forwards;
 }
 .label__checkbox:checked + .label__text .label__check .icon {
   opacity: 1;
   transform: scale(0);
   color: white;
   -webkit-text-stroke: 0;
-  -webkit-animation: icon 0.3s cubic-bezier(1, 0.008, 0.565, 1.65) 0.1s 1 forwards;
-          animation: icon 0.3s cubic-bezier(1, 0.008, 0.565, 1.65) 0.1s 1 forwards;
+  animation: icon 0.3s cubic-bezier(1, 0.008, 0.565, 1.65) 0.1s 1 forwards;
 }
 
 .center {
@@ -647,17 +635,6 @@ td.disabled {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-
-@-webkit-keyframes icon {
-  from {
-    opacity: 1;
-    transform: scale(1);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
 }
 
 @keyframes icon {
@@ -668,41 +645,6 @@ td.disabled {
   to {
     opacity: 1;
     transform: scale(1);
-  }
-}
-@-webkit-keyframes check {
-  0% {
-    width: 2em;
-    height: 2em;
-    border-width: 5px;
-  }
-  10% {
-    width: 2em;
-    height: 2em;
-    opacity: 0.1;
-    background: rgba(0, 0, 0, 0.2);
-    border-width: 5px;
-  }
-  12% {
-    width: 2em;
-    height: 2em;
-    opacity: 0.4;
-    background: rgba(0, 0, 0, 0.1);
-    border-width: 0;
-  }
-  50% {
-    width: 2em;
-    height: 2em;
-    background: #0f71bc;
-    border: 0;
-    opacity: 0.6;
-  }
-  100% {
-    width: 2em;
-    height: 2em;
-    background: #0f71bc;
-    border: 0;
-    opacity: 1;
   }
 }
 @keyframes check {

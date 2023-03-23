@@ -1,3 +1,18 @@
+<?php
+require_once('./dbconnect.php');
+
+$now = new DateTimeImmutable('now',);
+if(!empty($_GET)){
+  $month = $_GET('m');
+}else{
+  $month = 0;
+}
+
+$todayTotalHours = $pdo->query("SELECT COALESCE(sum(study_time), 0) FROM studies WHERE study_date BETWEEN '" . $now->format('Y-m-d') . "' AND '" . $now->format('Y-m-d') . "'") ->fetchColumn();
+$totalHours = $pdo->query("SELECT COALESCE(sum(study_time), 0) FROM studies") ->fetchColumn();
+$footerMonth = $now->modify('first day of this month')->format('Y年m月');
+$monthTotalHours = $pdo->query("SELECT COALESCE(sum(study_time), 0) FROM studies WHERE study_date BETWEEN '" . $now->format('Y-m-01') . "' AND '" . $now->format('Y-m-31') . "'") ->fetchColumn();
+?>
 <!DOCTYPE html>
 <html lang="ja">
   <head>
@@ -37,17 +52,17 @@
           <div class="main__container__left__time">
             <section class="main__container__left__time__items">
               <p class="main__container__left__time__items__title">Today</p>
-              <p class="main__container__left__time__items__number">3</p>
+              <p class="main__container__left__time__items__number"><?= $todayTotalHours ?></p>
               <p class="main__container__left__time__items__hour">hour</p>
             </section>
             <section class="main__container__left__time__items">
               <p class="main__container__left__time__items__title">Month</p>
-              <p class="main__container__left__time__items__number">120</p>
+              <p class="main__container__left__time__items__number"><?= $monthTotalHours?></p>
               <p class="main__container__left__time__items__hour">hour</p>
             </section>
             <section class="main__container__left__time__items">
               <p class="main__container__left__time__items__title">Total</p>
-              <p class="main__container__left__time__items__number">1348</p>
+              <p class="main__container__left__time__items__number"><?= $totalHours?></p>
               <p class="main__container__left__time__items__hour">hour</p>
             </section>
           </div>
@@ -88,6 +103,7 @@
         <div>
         <button class="modal__close" id="closeButton">×</button>
       </div>
+      <form action="./service/regist.php" method="POST">
         <div class="modal__content" id="modalContent">
           <div class="modal__content__left">
             <div class="modal__content__left__item">
@@ -98,13 +114,14 @@
                   type="text"
                   id="data"
                   class="modal__content__left__item__text"
+                  name="date"
                 />
             </div>
             <div class="modal__content__left__item">
               <p for="" class="label__title ">学習コンテンツ（複数選択可）</p>
                 <div class="checkbox">
                 <label class="label">
-                  <input class="label__checkbox" type="checkbox" />
+                  <input class="label__checkbox" type="checkbox" name="content" value="1" />
                   <span class="label__text">
                     <span class="label__check">
                       <i class="fa fa-check icon"></i>
@@ -115,7 +132,7 @@
               </div>
               <div class="checkbox">
                 <label class="label">
-                  <input class="label__checkbox" type="checkbox" />
+                  <input class="label__checkbox" type="checkbox" name="content" value="2" />
                   <span class="label__text">
                     <span class="label__check">
                       <i class="fa fa-check icon"></i>
@@ -126,7 +143,7 @@
               </div>
               <div class="checkbox">
                 <label class="label">
-                  <input class="label__checkbox" type="checkbox" />
+                  <input class="label__checkbox" type="checkbox" name="content" value="3" />
                   <span class="label__text">
                     <span class="label__check">
                       <i class="fa fa-check icon"></i>
@@ -140,7 +157,7 @@
               <p for="" class="label__title">学習言語(複数選択可）</p>
                 <div class="checkbox">
                 <label class="label">
-                  <input class="label__checkbox" type="checkbox" />
+                  <input class="label__checkbox" type="checkbox" name="language" value="1" />
                   <span class="label__text">
                     <span class="label__check">
                       <i class="fa fa-check icon"></i>
@@ -151,7 +168,7 @@
               </div>
               <div class="checkbox">
                 <label class="label">
-                  <input class="label__checkbox" type="checkbox" />
+                  <input class="label__checkbox" type="checkbox"name="language" value="2" />
                   <span class="label__text">
                     <span class="label__check">
                       <i class="fa fa-check icon"></i>
@@ -162,7 +179,7 @@
               </div>
               <div class="checkbox">
                 <label class="label">
-                  <input class="label__checkbox" type="checkbox" />
+                  <input class="label__checkbox" type="checkbox" name="language" value="3" />
                   <span class="label__text">
                     <span class="label__check">
                       <i class="fa fa-check icon"></i>
@@ -173,7 +190,7 @@
               </div>
               <div class="checkbox">
                 <label class="label">
-                  <input class="label__checkbox" type="checkbox" />
+                  <input class="label__checkbox" type="checkbox" name="language" value="4" />
                   <span class="label__text">
                     <span class="label__check">
                       <i class="fa fa-check icon"></i>
@@ -184,7 +201,7 @@
               </div>
               <div class="checkbox">
                 <label class="label">
-                  <input class="label__checkbox" type="checkbox" />
+                  <input class="label__checkbox" type="checkbox" name="language" value="5" />
                   <span class="label__text">
                     <span class="label__check">
                       <i class="fa fa-check icon"></i>
@@ -195,7 +212,7 @@
               </div>
               <div class="checkbox">
                 <label class="label">
-                  <input class="label__checkbox" type="checkbox" />
+                  <input class="label__checkbox" type="checkbox" name="language" value="6" />
                   <span class="label__text">
                     <span class="label__check">
                       <i class="fa fa-check icon"></i>
@@ -206,7 +223,7 @@
               </div>
               <div class="checkbox">
                 <label class="label">
-                  <input class="label__checkbox" type="checkbox" />
+                  <input class="label__checkbox" type="checkbox" name="language" value="7" />
                   <span class="label__text">
                     <span class="label__check">
                       <i class="fa fa-check icon"></i>
@@ -217,7 +234,7 @@
               </div>
               <div class="checkbox">
                 <label class="label">
-                  <input class="label__checkbox" type="checkbox" />
+                  <input class="label__checkbox" type="checkbox" name="language" value="8" />
                   <span class="label__text">
                     <span class="label__check">
                       <i class="fa fa-check icon"></i>
@@ -232,7 +249,7 @@
           <div class="modal__content__right">
             <p class="label__title"
               >学習時間</p>
-              <input type="text" class="time__text" />
+              <input type="number" min="1" class="time__text" name="time" />
               <p for="" class="label__title">Twitter用コメント</p>
               <textarea class="twitter" cols="40" rows="10" placeholder="140字以内で入力" id="textArea"/>
               </textarea>
@@ -250,6 +267,7 @@
           </div>
         </div>
         <button class="modal__button" id="loadingButton">記録・投稿</button>
+        </form>
         <div class="loader hidden" id="loading"></div>
         <!--カレンダー-->
   
@@ -287,14 +305,14 @@
 
     <!--main end-->
     <div class="footer">
-      <a href="" class="footer__month">2022年 10月</a>
+      <a href="" class="footer__month"><?= $footerMonth?></a>
       <button class="header__inner__right__button responsive__button" id="responsiveButton">
         記録・投稿
-      </button>
-    </ぢ>
+          </button>
+  
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
     <script src="./script/modal.js"></script>
-    <script src="./script/chart.js"></script>
+    <?php require_once("./chart.php")?>
   </body>
 </html>

@@ -33,7 +33,7 @@
   //カレンダー機能
 
   {
-    const today = new Date();
+    const today = new Date(today + '0').splice(-2);
     let year = today.getFullYear();
     let month = today.getMonth();
 
@@ -211,7 +211,7 @@
     mask.classList.remove("hidden");
   });
 
-
+  console(today);
 }
 
 
