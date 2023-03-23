@@ -1,5 +1,5 @@
 <?php
-require_once('./dbconnect.php');
+require_once('../dbconnect.php');
 
 $now = new DateTimeImmutable('now',);
 if(!empty($_GET)){
@@ -21,7 +21,7 @@ $monthTotalHours = $pdo->query("SELECT COALESCE(sum(study_time), 0) FROM studies
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>webapp</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="./sass/style.css" />
+    <link rel="stylesheet" href="../sass/style.css" />
   </head>
   <body>
     <header class="header">
@@ -29,7 +29,7 @@ $monthTotalHours = $pdo->query("SELECT COALESCE(sum(study_time), 0) FROM studies
         <div class="header__inner__left">
           <ul class="header__inner__left__items">
             <li class="header__inner__left__items__item">
-              <img src="./assets/logo.svg" alt="" />
+              <img src="../assets/img/logo.svg" alt="" />
             </li>
             <li class="header__inner__left__items__item">
               <p class="header__inner__left__items__item__week">4th week</p>
@@ -103,7 +103,7 @@ $monthTotalHours = $pdo->query("SELECT COALESCE(sum(study_time), 0) FROM studies
         <div>
         <button class="modal__close" id="closeButton">×</button>
       </div>
-      <form action="./service/regist.php" method="POST">
+      <form action="../service/regist.php" method="POST">
         <div class="modal__content" id="modalContent">
           <div class="modal__content__left">
             <div class="modal__content__left__item">
@@ -249,7 +249,7 @@ $monthTotalHours = $pdo->query("SELECT COALESCE(sum(study_time), 0) FROM studies
           <div class="modal__content__right">
             <p class="label__title"
               >学習時間</p>
-              <input type="number" min="1" class="time__text" name="time" />
+              <input type="number" min="1" value="1" class="time__text" name="time" />
               <p for="" class="label__title">Twitter用コメント</p>
               <textarea class="twitter" cols="40" rows="10" placeholder="140字以内で入力" id="textArea"/>
               </textarea>
@@ -312,7 +312,7 @@ $monthTotalHours = $pdo->query("SELECT COALESCE(sum(study_time), 0) FROM studies
   
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
-    <script src="./script/modal.js"></script>
+    <script src="../script/modal.js"></script>
     <?php require_once("./chart.php")?>
   </body>
 </html>

@@ -9,7 +9,7 @@
 <body>
   <div class="">
     <p>記録できませんでした</p>
-    <a href="http://localhost:8080/index.php">ホームに戻る</a>
+    <a href="http://localhost:8080/html/index.php">ホームに戻る</a>
   </div>
 </body>
 </html>
